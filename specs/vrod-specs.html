@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harley Davidson V-Rod</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/specsheet.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="../images/logo.jpg" alt="Logo" class="logo">
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../bilar.html">Bilar</a></li>
+            <li><a href="../mc.html">MC</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-section">
+        <div class="image-text-container">
+            <div class="car-image">
+                <img src="../images/vrod.jpg" alt="Harley Davidson V-Rod">
+            </div>
+            <div class="text-box">
+                <div class="button-container">
+                    <button onclick="showContent('vrod_1')">Allmänt</button>
+                    <button onclick="showContent('vrod_2')">Pris</button>
+                    <button onclick="showContent('vrod_3')">Motor</button>
+                    <button onclick="showContent('vrod_4')">Växellåda</button>
+                    <button onclick="showContent('vrod_5')">Dimensioner</button>
+                    <button onclick="showContent('vrod_6')">Hjul</button>
+                    <button onclick="showContent('vrod_7')">Bromsar</button>
+                </div>
+                <div id="content">
+                    <p>Harley Davidson V-Rod</p>
+                </div>               
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

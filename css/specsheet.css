@@ -1,0 +1,134 @@
+.image-text-container {
+    display: flex;
+    flex-wrap: wrap; /* Makes it responsive */
+    padding: 2rem; /* Add some padding around the section */
+    padding-top: 7rem;
+    gap: 2rem; /* Space between the image and text */
+}
+
+.car-image {
+    max-width: 30rem; /* Set a max width for the image */
+    min-width: 30rem;
+    max-height: 20rem;
+}
+
+.car-image img {
+    width: 100%; /* Adjust the size as needed */
+    height: 100%;
+    border-radius: 1rem; /* Rounded corners */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 1.0); /* Optional: shadow effect */
+
+}
+
+.text-box {
+    flex: 1; /* Take up the remaining space */
+    background-color: #444; /* Light gray background */
+    padding: 1rem;
+    border-radius: 1rem; /* Rounded corners for the text box */
+    box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 1.0); /* Optional: shadow effect */
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+}
+
+.button-container button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+
+}
+
+.button-container button:hover {
+    background-color: #555;
+}
+
+#content {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+@media(min-width: 1024px) {
+
+}
+
+@media(min-width: 768px) and (max-width:1024px) {
+
+    .button-container {
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+
+    .button-container button {
+        min-width: 23%;
+        max-width: 100%;
+        flex-grow: 1;
+    }
+
+    .image-text-container {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+    }
+    
+    .car-image {
+        max-height: 30rem;
+        min-height: 30rem;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .car-image img {
+        max-width: 100%; /* Make image full-width on smaller screens */
+        min-width: 100%;
+        height: 30rem;
+    }
+
+    .text-box {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .button-container {
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+
+    .button-container button {
+        min-width: 25%;
+        max-width: 50%;
+        flex-grow: 1;
+    }
+
+    .image-text-container {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+    }
+    
+    .car-image {
+        max-height: 20rem;
+        min-height: 20rem;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .car-image img {
+        max-width: 100%; /* Make image full-width on smaller screens */
+        min-width: 100%;
+        height: 20rem;
+    }
+
+    .text-box {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/bg.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensure the image covers the whole viewport */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep the image fixed when scrolling */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    z-index: -1; /* Make sure it stays behind all content */
+}
+
+h1 {
+    font-family: 'Georgia', serif; /* Apply the same font as text under images */
+    color: #ffffff; /* Optional: set color if needed */
+}
+
+.styled-header {
+    background-color: #333; /* Background color of the box */
+    padding: 20px; /* Space inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    display: inline-block; /* Box size fits the content */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin: 0 auto; /* Center the box horizontally */
+    text-align: center; /* Center text inside the box */
+}
+
+.home-page-container {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home-page {
+    margin-top: 10rem;
+    padding: 1rem;
+    width: 50%;
+    height: 35rem;
+    background-color: #333;
+    border-radius: 1rem;
+    text-align: center;
+    font-family: 'Georgia', serif; /* Font for text under images */
+    box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 1.0);
+
+}
+
+.home-page img {
+    width: 7rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.home-page h1 {
+    color: #ffffff;
+}
+
+.home-page p {
+    margin-top: 1rem;
+    color: #ffffff;
+}
+
+#footer {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media query for larger screens */
+@media(min-width: 1024px) {
+
+}
+
+@media(min-width: 768px) and (max-width:1024px) {
+    .home-page {
+        width: 70%;
+        height: 50rem;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .home-page {
+        width: 85%;
+        height: 38rem;
+    }
+}

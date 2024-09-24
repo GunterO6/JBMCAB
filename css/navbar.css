@@ -1,0 +1,158 @@
+.navbar {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    z-index: 1000; /* Below the logo */
+    box-sizing: border-box; /* Include padding in width calculation */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 0; /* Remove default padding */
+    height: 5rem; /* Set a fixed height for the navbar */
+    overflow: hidden; /* Hide any overflow content */
+    justify-content: center; /* Center content horizontally */
+}
+
+/* Ensure the logo does not push the navbar down */
+.navbar-content {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    justify-content: center; /* Center items in the navbar */
+}
+
+.logo-container {
+    position: absolute; /* Keep it from affecting navbar height */
+    top: 1.2rem; /* Adjust as needed */
+    left: 1.75rem; /* Adjust as needed */
+    z-index: 1001; /* Ensure it stays above other content */
+}
+
+.logo {
+    height: 40px; /* Adjust size as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.menu-toggle {
+    margin: 0.5rem;
+    display: none; /* Default to hidden */
+    visibility: hidden; /* Ensure it is not visible */
+    opacity: 0; /* Start with hidden opacity */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+    flex-direction: column;
+    cursor: pointer;
+    width: 2rem;
+    z-index: 1001;
+    position: relative;
+}
+
+.bar {
+    height: 6px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.nav-links {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Off-screen initially */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    list-style: none;
+    display: flex;  
+    flex-direction: column;
+    justify-content: left;
+    text-align: center;
+    transition: left 0.3s;
+    z-index: 999;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #555; /* Change background color on hover */
+    color: #f1c40f; /* Change text color on hover */
+    text-decoration: underline; /* Optional: add underline */
+    border-radius: 5px;
+}
+.nav-links.active {
+    left: 0;
+}
+
+.nav-links li {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    padding: 1rem;
+}
+
+@media(min-width: 768px) {
+    .menu-toggle {
+        display: none; /* Hide the element */
+        visibility: hidden; /* Ensure it is not visible */
+        opacity: 0; /* Make it fully transparent */
+    }
+
+    .nav-links {
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        transform: none;
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    /* Adjusting the size of the navbar on larger screens */
+    .navbar {
+        padding: 2rem; /* Increase padding */
+        background-color: #444; /* Change background color if needed */
+    }
+
+    .nav-links a {
+        font-size: 1.8rem; /* Increase font size for links */
+        padding: 0 2rem; /* Add more padding to links */
+    }
+}
+
+@media (max-width: 767px) {
+
+    .menu-toggle {
+        display: flex; /* Make the element visible */
+        visibility: visible; /* Ensure it is visible */
+        opacity: 1; /* Make it fully opaque */
+    }
+
+    .navbar {
+        padding: 0.5rem; /* Remove padding to reduce height */
+        height: auto; /* Allow height to adjust based on content */
+        align-items: flex-start; /* Align items to the top */
+        justify-content: flex-start; /* Align items to the start */
+    }
+
+    .nav-links li:first-child {
+        margin-left: 0;
+        margin-top: 4.2rem;
+    }
+
+    .logo-container {
+        position: fixed; /* Keep logo fixed */
+        top: 0.5rem; /* Adjust as needed */
+        left: 50%; /* Center logo horizontally */
+        transform: translateX(-50%); /* Center horizontally */
+    }
+
+    .navbar-content {
+        display: none; /* Hide content if needed */
+    }
+}

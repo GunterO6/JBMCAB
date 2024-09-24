@@ -1,0 +1,85 @@
+.gallery {
+    padding: 6.5rem 2rem 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    gap: 1rem;
+}
+
+.gallery-item {
+    flex: 1 1 calc(30% - 1rem); /* Three items wide, accounting for gaps */
+    max-width: calc(30% - 1rem); /* Ensures items don't exceed width */
+    margin: 0.5rem; /* Margin around items */
+    padding: 0.5rem; /* Padding inside items */
+    border-radius: 1rem;
+    padding-top: 0.9rem;
+    box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 1);
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    overflow: hidden; /* Prevents content from overflowing outside the box */
+    background-color: #555; /* Set background color to white or another solid color */
+    flex-direction: column;
+}
+
+.gallery-item a img {
+    width: 95.5%;
+    max-height: 83%;
+    min-height: 83%;
+    height: auto;
+    object-fit: cover; /* Covers the container and crops as needed */
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.gallery-item a img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.gallery-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    font-size: 1.5rem; /* Slightly larger font size */
+    font-weight: bold; /* Make text bold */
+    color: #ffffff;
+    font-family: 'Georgia', serif; /* Font for text under images */
+}
+
+
+@media(min-width: 1024px) {
+    .gallery-item {
+        min-height: 25rem;
+        max-height: 25rem;
+    }
+}
+
+@media(min-width: 768px) and (max-width:1024px) {
+
+    .gallery-item {
+        flex: 1 1 calc(45% - 1rem); /* Three items wide, accounting for gaps */
+        max-width: calc(45% - 1rem); /* Ensures items don't exceed width */
+        min-height: 25rem;
+        max-height: 25rem;
+    }
+    
+}
+
+@media (max-width: 767px) {
+
+    .gallery-item {
+        flex: 1 1 100%; /* One item wide on smaller screens */
+        max-width: 100%;
+        min-height: 25rem;
+        max-height: 25rem;
+    }
+
+    .gallery-item a img {
+        max-height: 83%;
+        min-height: 83%;
+    }
+}
