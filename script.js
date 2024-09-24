@@ -2,9 +2,12 @@
 const menuToggle = document.getElementById('mobile-menu');
 const navLinks = document.getElementById('nav-links');
 
-menuToggle.addEventListener('click', () => {
+// Add event listener once
+menuToggle.addEventListener('click', function() {
+    menuToggle.classList.toggle('active');
     navLinks.classList.toggle('active');
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     fetchContent();
